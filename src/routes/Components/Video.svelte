@@ -1,5 +1,5 @@
 <script>
-    import video from '$lib/Videos/Palworld.mp4'
+    import video from '$lib/videos/Palworld.mp4'
     import img1 from '$lib/images/appstore.webp'
     import img2 from '$lib/images/google.webp'
     import { Heading, P, Button, Video, Card } from 'flowbite-svelte'
