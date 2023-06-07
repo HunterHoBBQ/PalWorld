@@ -10,10 +10,6 @@
 
 	<Jumbotron />
 	<Video />
-<Jumbotron />
-<Video />
-<Jumbotron />
-<Video />
 
 <slot />
 
