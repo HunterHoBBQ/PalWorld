@@ -32,10 +32,10 @@
           Stay up to date and move work forward with Joy Glob on iOS & Android. Download the app today.
         </p>
         <div class="justify-center items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-          <a href="">
+          <a href="" class="flex items-center justify-center">
             <img src={img1} alt="" size="xs">
         </a>
-        <a href="">
+        <a href="" class="flex items-center justify-center">
             <img src={img2} alt="" size="xs">
         </a>
         </div>

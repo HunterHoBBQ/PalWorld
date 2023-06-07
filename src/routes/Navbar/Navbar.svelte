@@ -4,6 +4,10 @@
 </script>
 
 
+
+
+
+
 <nav class="... sticky top-0">
   <div class="relative px-8">
     <Navbar
@@ -18,7 +22,8 @@
       <NavHamburger on:click={toggle} />
       <NavUl {hidden}>
         <NavLi class="mt-2" href="/" active={true}>Home</NavLi>
-        <NavLi class="mt-2" href="/about">About</NavLi>
+        <NavLi class="mt-2" href="/about" >About</NavLi>
+        <NavLi class="mt-2" href="/about" >Career</NavLi>
         <NavLi class="mt-2" href="/services">Services</NavLi>
         <NavLi class="mt-2" href="/pricing">Pricing</NavLi>
         <NavLi class="mt-2" href="/contact">Contact</NavLi>
