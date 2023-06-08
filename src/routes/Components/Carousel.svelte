@@ -96,7 +96,7 @@
 
 
   <!-- <h1>{scroll}</h1> -->
-<div class="max-w-4x1 mt-10 mb-10 justify-center">
+<div class="max-w-4x1 mt-10 mb-10 justify-center items-center flex">
   <Carousel divClass = 'overflow-hidden relative h-156 rounded-lg xl:h-180 2xl:h-196'; 
   {images} loop {showThumbs} {showCaptions} {showIndicators} duration="3000"/>
 </div>

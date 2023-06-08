@@ -27,23 +27,21 @@
 </div>
 
 
-<div class="flex items-center justify-center mt-10 mb-10" >
-    <Card class="text-center" size="lg" padding='xl'>
-        <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white" >
+<div class="flex items-center justify-center ml-4 mt-10 mb-10 mr-4" >
+    <!-- <Card class="text-center" size="lg" padding='xl'> -->
+        <h5 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white mr-10" >
             Pals World Metaverse
+            
         </h5>
-        <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
-          Stay up to date and move work forward with Joy Glob on iOS & Android. Download the app today.
-        </p>
         <div class="justify-center items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-          <a href="/" class="flex items-center justify-center">
-            <img src={img1} alt="" size="xs">
+          <a href="/" class="">
+            <img src={img1} alt="">
         </a>
-        <a href="/" class="flex items-center justify-center">
-            <img src={img2} alt="" size="xs">
+        <a href="/" class="">
+            <img src={img2} alt="">
         </a>
         </div>
-      </Card>
+      <!-- </Card> -->
 </div>
 
 
