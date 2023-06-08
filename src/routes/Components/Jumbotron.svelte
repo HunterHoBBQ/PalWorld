@@ -18,3 +18,17 @@
         </div>
     </div>
 </section>
+
+<script>
+    import { Heading, P, Button, } from 'flowbite-svelte'
+</script>
+
+<div class="text-center mt-10 mb-10 z-10 ">
+    <Heading tag="h1" class="mb-4" customSize="text-4xl font-extrabold md:text-5xl lg:text-6xl">
+      Newest MetaWorld
+      <!-- Newest MetaWorld -->
+    </Heading>
+    <P class="z-20 mb-6 text-center text-lg lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+        This is the best next big game / 这是最好的下一个大型手机游戏</P>
+    <Button href="/">Download & Play Now!</Button>
+  </div>

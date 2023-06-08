@@ -12,16 +12,18 @@
 
 	<Navbar />
 
-	<Jumbotron />
-
 	<Video />
-
+	
+	<Jumbotron />
+	
+	<Carousel />
+	
 	<Cards />
 
-	<Carousel />
 
 	<!-- <slot /> -->
-
+	
 	<Footer />
-
+	
+	<!-- <Brands /> -->
 
