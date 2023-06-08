@@ -81,14 +81,15 @@
 
 <!-- <h1>{scroll}</h1> -->
 
-{#if scroll > 3000 && scroll < 4000 || scroll > 5200}
-	<div class="parent mb-10" in:slide="{{duration: 2000}}" out:slide >
-		<div class="text-center mt-10 mb-10">
+{#if scroll > 1000 && scroll < 3000 || scroll > 4200}
+	<div class="parent mb-10" in:slide="{{duration: 1000}}" out:slide >
+		<div class="text-center mt-10 ">
       <Heading tag="h1" class="mb-4" customSize="text-4xl font-extrabold md:text-5xl lg:text-6xl 
       ">Im the Secret of Joy Glob</Heading>
       <P class="mt-5 mb-6 text-center text-lg lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400
       ">
-          Every Game is Best of the Best / 每个手机游戏都是最好的</P>
+          Every Game is Best of the Best / 每个手机游戏都是最好的
+        </P>
     </div>
 	</div>
 {/if}

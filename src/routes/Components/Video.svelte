@@ -13,9 +13,7 @@
 
 
   
-  <div class="-z-20 fixed" style:transform={`translate3d(0, ${scroll * -2}px, 0`}>
-    <img src={bg_1} alt="">
-  </div>
+ 
   
 
 <Video class="w-screen" src={video} loop autoplay muted trackSrc='Palworld.mp4' />
@@ -48,3 +46,7 @@
       </Card>
 </div>
 
+
+<div class="-z-20 fixed" style:transform={`translate3d(0, ${scroll * -2}px, 0`}>
+  <img src={bg_1} alt="">
+</div>

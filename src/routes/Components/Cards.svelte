@@ -9,6 +9,9 @@
     import img7 from '$lib/images/lol.webp';
     import img8 from '$lib/images/pubg.webp';
     import img9 from '$lib/images/snap.webp';
+    import bg_1 from '$lib/images/pngegg.png'
+    import bg_2 from '$lib/images/1.png'
+    let scroll;
 </script>
 
 
@@ -61,7 +64,12 @@
   </div>
 
 
+  <svelte:window bind:scrollY={scroll} />
 
+  <div class="-z-20 fixed" style:transform={`translate3d(0, ${scroll * -2.1}px, 0`}>
+    <img src={bg_1} alt="">
+  </div>
+  
 
 
 
@@ -102,7 +110,9 @@
 
 
 
-
+  <div class="-z-20 fixed" style:transform={`translate3d(0, ${scroll * -1.5}px, 0`}>
+    <img src={bg_2} alt="">
+  </div>
 
 
 
