@@ -23,6 +23,7 @@
   transition transform hover:-translate-y-5 motion-reduce:transition-none motion-reduce:hover:transform-none">
       Every Game is Best of the Best / 每个手机游戏都是最好的</P>
   <!-- <Button href="/">Download & Play Now!</Button> -->
+  <P class="text-center">^ Touch Me ^</P>
 </div>
 
 
