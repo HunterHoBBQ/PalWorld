@@ -76,9 +76,13 @@
 
   </script>
 
+
   <svelte:window bind:scrollY={scroll} />
-  {#if scroll > 2800}
-	<div class="parent" in:slide out:slide>
+
+<!-- <h1>{scroll}</h1> -->
+
+{#if scroll > 3000 && scroll < 4000 || scroll > 5200}
+	<div class="parent mb-10" in:slide="{{duration: 2000}}" out:slide >
 		<div class="text-center mt-10 mb-10">
       <Heading tag="h1" class="mb-4" customSize="text-4xl font-extrabold md:text-5xl lg:text-6xl 
       ">Im the Secret of Joy Glob</Heading>
