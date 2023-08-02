@@ -8,22 +8,20 @@
 	import Carousel from './Components/Carousel.svelte';
 </script>
 
-<header title="Joy Glob"></header>
+<header title="Pals World" />
 
-	<Navbar />
+<Navbar />
 
-	<Video />
-	
-	<Jumbotron />
-	
-	<Carousel />
-	
-	<Cards />
+<Video />
 
+<Jumbotron />
 
-	<!-- <slot /> -->
-	
-	<Footer />
-	
-	<!-- <Brands /> -->
+<Carousel />
 
+<Cards />
+
+<!-- <slot /> -->
+
+<Footer />
+
+<!-- <Brands /> -->
