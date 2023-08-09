@@ -1,0 +1,128 @@
+<script>
+  import { onMount } from "svelte";
+  import palworld_bg from "$lib/images/palworld_bg.jpg";
+  import cutee from "$lib/images/cutee.webp";
+  import Palworld_video from "$lib/videos/Palworld.mp4";
+  import { fade } from "svelte/transition";
+  import Hero_text_1 from "./hero_text_1.svelte";
+  import Hero_text_2 from "./hero_text_2.svelte";
+  import Hero_text_3 from "./hero_text_3.svelte";
+  import Hero_text_4 from "./hero_text_4.svelte";
+  import Hero_text_5 from "./hero_text_5.svelte";
+  export let scrollY;
+
+  let showImage = true;
+  let showVideo = false;
+  let videoElement;
+
+  onMount(() => {
+    setTimeout(() => {
+      showImage = false;
+      showVideo = true;
+      videoElement = document.getElementById("videoElement"); // Get the video element
+    }, 1000); // 3 seconds delay
+
+    // Event handler to play video when image fades out
+    const handleImageFadeOut = () => {
+      showImage = false;
+      showVideo = true;
+      videoElement.play();
+    };
+
+    const imageElement = document.querySelector("img"); // Get the image element
+    imageElement.addEventListener("animationend", handleImageFadeOut); // Listen for the end of the fade-out animation
+  });
+</script>
+
+<div class="container">
+  <div class="video-wrapper">
+    {#if showVideo}
+      <video id="videoElement" track={Palworld_video} autoplay preload="auto" class:fade-in={showVideo} class:visible={showVideo} width="1920">
+        <source src={Palworld_video} type="video/mp4" />
+        <track kind="captions" />
+      </video>
+      <div class="hero-text">
+        <h1 class="cool-effect">
+          Palworld Survival <hr />
+          <a href="https://store.steampowered.com/app/1623730/Palworld/">
+            <!-- <img height="60vh" src={steam_logo} alt="" /> -->
+          </a>
+        </h1>
+        <p>Scroll Y position: {scrollY}</p>
+        <!-- {#if scrollY > 1} -->
+        <Hero_text_1 />
+        <!-- {/if} -->
+      </div>
+    {/if}
+    {#if showImage}
+      <img src={palworld_bg} alt="Pal World" in:fade out:fade={showImage} />
+    {/if}
+  </div>
+  <!-- <img loading="lazy" src={cutee} alt="Image" /> -->
+</div>
+
+<style>
+  hr {
+    /* color: gray; */
+    width: 100%;
+    border: #ffd700 1px solid;
+    opacity: 0.3;
+  }
+  .container {
+    width: 100vw;
+    /* height: 80vh; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: -53px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 1s;
+  }
+
+  .video-wrapper {
+    position: absolute;
+    transition: opacity 1s;
+  }
+
+  video {
+    max-width: 100%;
+    width: 100vw;
+  }
+
+  /* Your navbar styles here */
+
+  .hero-text {
+    margin-top: -5px;
+    text-align: center;
+    /* background-color: #000; */
+    padding: 20px;
+  }
+
+  .cool-effect {
+    font-family: "Arial", sans-serif;
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: glowing 2s ease-in-out infinite;
+  }
+
+  @keyframes glowing {
+    0% {
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      color: #ffd700;
+      text-shadow: 0px 0px 8px #ffd700, 0px 0px 12px #ffd700;
+    }
+    100% {
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+</style>
