@@ -14,6 +14,7 @@
   import Hero_text_4 from "./hero_text_4.svelte";
   import Hero_text_5 from "./hero_text_5.svelte";
   import Footer from "./footer.svelte";
+  import thumb_video from "$lib/images/palworld_bg.webp";
   export let scrollY;
 
   let showImage = true;
@@ -25,7 +26,8 @@
       showImage = false;
       showVideo = true;
       videoElement = document.getElementById("videoElement"); // Get the video element
-    }, 1000); // 3 seconds delay
+      // videoElement.play();
+    }, 2000); // 2 seconds delay
 
     // Event handler to play video when image fades out
     const handleImageFadeOut = () => {
@@ -37,18 +39,37 @@
     const imageElement = document.querySelector("img"); // Get the image element
     imageElement.addEventListener("animationend", handleImageFadeOut); // Listen for the end of the fade-out animation
   });
+  if (scrollY > 10) {
+    videoElement = document.getElementById("videoElement");
+    // videoElement.play();
+  }
+  if (scrollY > 50) {
+    videoElement = document.getElementById("videoElement");
+    videoElement.pause();
+    videoElement.stop();
+  }
 </script>
 
 <div class="container">
   <div class="video-wrapper">
     {#if showVideo}
-      <video id="videoElement" track={Palworld_video} autoplay preload="auto" class:fade-in={showVideo} class:visible={showVideo} width="1920">
+      <video id="videoElement" poster={thumb_video} loading="eager" autoplay width="1920">
         <source src={Palworld_video} type="video/mp4" />
         <track kind="captions" />
       </video>
+      <div class="hide">
+        {#if scrollY > 250}
+          {(videoElement = document.getElementById("videoElement"))}
+          {videoElement.pause()}
+        {:else if scrollY < 250 && scrollY > 10}
+          {(videoElement = document.getElementById("videoElement"))}
+          {videoElement.play()}
+        {/if}
+      </div>
       <div class="hero-text">
         <h1 class="cool-effect">
-          Palworld Survival <hr />
+          Palworld Survival
+          <hr />
           <a href="https://store.steampowered.com/app/1623730/Palworld/">
             <!-- <img height="60vh" src={steam_logo} alt="" /> -->
           </a>
@@ -137,5 +158,10 @@
       color: #fff;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
+  }
+
+  .hide {
+    visibility: hidden;
+    display: none;
   }
 </style>

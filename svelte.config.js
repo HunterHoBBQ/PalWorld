@@ -10,7 +10,7 @@ export default {
       fallback: undefined,
       precompress: false,
       strict: true,
-      paths: { base: process.env.NODE_ENV === "production" ? "/sveltekit-gh-pages" : "" },
+      paths: { base: process.env.NODE_ENV === "production" ? "/sveltekit-gh-pages" : "", relative: false },
     }),
   },
 };
