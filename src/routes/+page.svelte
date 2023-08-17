@@ -1,4 +1,5 @@
 <script>
+  import Footer from "./components/footer.svelte";
   import Video from "./components/video_hero.svelte";
   import Navbar from "./components/navbar.svelte";
   export let scrollY = 0;
@@ -57,7 +58,7 @@
   :global(HTML) {
     scroll-behavior: smooth;
   }
-  ::root {
+  :global(::root) {
     --scrollbar-width: 6px; /* Adjust this value to make the scrollbar slimmer */
     --scrollbar-thumb-color: #aaa; /* Color of the scrollbar thumb */
     --scrollbar-track-color: transparent; /* Color of the scrollbar track */
@@ -65,16 +66,16 @@
 
   /* Apply styles to the scrollbar */
   /* For WebKit-based browsers */
-  ::-webkit-scrollbar {
-    width: var(--scrollbar-width);
+  :global(::-webkit-scrollbar) {
+    /* width: var(--scrollbar-width); */
   }
 
-  ::-webkit-scrollbar-thumb {
+  :global(::-webkit-scrollbar-thumb) {
     background-color: var(--scrollbar-thumb-color);
     border-radius: var(--scrollbar-width);
   }
 
-  ::-webkit-scrollbar-track {
+  :global(::-webkit-scrollbar-track) {
     background-color: var(--scrollbar-track-color);
   }
 </style>
