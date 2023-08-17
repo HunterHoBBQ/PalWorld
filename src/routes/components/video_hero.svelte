@@ -1,6 +1,10 @@
 <script>
+  import Btm_video from "./btm_video.svelte";
+  import Lang from "./lang.svelte";
+  import BtmHero from "./btm_hero.svelte";
+  import CardGallery from "./card_gallery.svelte";
   import { onMount } from "svelte";
-  import palworld_bg from "$lib/images/palworld_bg.jpg";
+  import palworld_bg from "$lib/images/palworld_bg.webp";
   import cutee from "$lib/images/cutee.webp";
   import Palworld_video from "$lib/videos/Palworld.mp4";
   import { fade } from "svelte/transition";
@@ -9,6 +13,7 @@
   import Hero_text_3 from "./hero_text_3.svelte";
   import Hero_text_4 from "./hero_text_4.svelte";
   import Hero_text_5 from "./hero_text_5.svelte";
+  import Footer from "./footer.svelte";
   export let scrollY;
 
   let showImage = true;
@@ -48,10 +53,18 @@
             <!-- <img height="60vh" src={steam_logo} alt="" /> -->
           </a>
         </h1>
-        <p>Scroll Y position: {scrollY}</p>
         <!-- {#if scrollY > 1} -->
         <Hero_text_1 />
+        <!-- <p>Scroll Y position: {scrollY}</p> -->
+        <CardGallery {scrollY} />
         <!-- {/if} -->
+        <!-- <Hero_text_2 /> -->
+        <!-- <BtmHero /> -->
+        <Lang />
+        <Btm_video />
+        <footer>
+          <Footer />
+        </footer>
       </div>
     {/if}
     {#if showImage}
@@ -78,8 +91,8 @@
   }
 
   img {
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    /* height: auto; */
     object-fit: contain;
     transition: opacity 1s;
   }

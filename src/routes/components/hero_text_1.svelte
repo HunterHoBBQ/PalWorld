@@ -1,10 +1,10 @@
 <script>
   import { onMount } from "svelte";
-  import case_1 from "$lib/images/case_1.jpg";
-  import case_2 from "$lib/images/case_2.jpg";
-  import case_3 from "$lib/images/case_3.jpg";
-  import case_4 from "$lib/images/case_4.jpg";
-  import case_5 from "$lib/images/case_5.jpg";
+  import case_1 from "$lib/images/case_1.webp";
+  import case_2 from "$lib/images/case_2.webp";
+  import case_3 from "$lib/images/case_3.webp";
+  import case_4 from "$lib/images/case_4.webp";
+  import case_5 from "$lib/images/case_5.webp";
   import { fly } from "svelte/transition";
   const sections = [
     {
@@ -61,10 +61,10 @@
       <!-- {#if scrollY > 50 && window.innerWidth <= 768 && index === 0}
         <img src={section.image} alt={section.title} class="animated-image" transition:fly={{ duration: 1000, delay: 300, x: -150 }} />
       {/if} -->
-      {#if index % 2 === 1 && ((scrollY > 50 && window.innerWidth <= 768 && index === 0) || (scrollY > 220 * (index + 2) && window.innerWidth < 1000 && index !== 0) || (scrollY > 400 * (index + 2) && window.innerWidth >= 1000) || (scrollY > 200 * (index + 2) && window.innerWidth > 768))}
-        <img src={section.image} alt={section.title} class="animated-image" transition:fly={{ duration: 1000, delay: 300, x: -150 }} />
-      {:else if (scrollY > 50 && window.innerWidth <= 768 && index === 0) || (scrollY > 220 * (index + 2) && window.innerWidth < 1000 && index !== 0) || (scrollY > 400 * (index + 2) && window.innerWidth >= 1000) || (scrollY > 200 * (index + 2) && window.innerWidth > 768)}
-        <img src={section.image} alt={section.title} class="animated-image" transition:fly={{ duration: 1000, delay: 300, x: 150 }} />
+      {#if index % 2 === 1 && ((scrollY > 50 && window.innerWidth <= 768 && index === 0) || (scrollY > 190 * (index + 2) && window.innerWidth < 1000 && index !== 0) || (scrollY > 400 * (index + 2) && window.innerWidth >= 1000) || (scrollY > 200 * (index + 2) && window.innerWidth > 768))}
+        <img loading="lazy" src={section.image} alt={section.title} class="animated-image" transition:fly={{ duration: 1000, delay: 300, x: -150 }} />
+      {:else if (scrollY > 50 && window.innerWidth <= 768 && index === 0) || (scrollY > 190 * (index + 2) && window.innerWidth < 1000 && index !== 0) || (scrollY > 400 * (index + 2) && window.innerWidth >= 1000) || (scrollY > 200 * (index + 2) && window.innerWidth > 768)}
+        <img loading="lazy" src={section.image} alt={section.title} class="animated-image" transition:fly={{ duration: 1000, delay: 300, x: 150 }} />
       {/if}
     </div>
   </div>
