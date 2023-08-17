@@ -1,9 +1,9 @@
 <script>
+  import { onMount } from "svelte";
   import Btm_video from "./btm_video.svelte";
   import Lang from "./lang.svelte";
   import BtmHero from "./btm_hero.svelte";
   import CardGallery from "./card_gallery.svelte";
-  import { onMount } from "svelte";
   import palworld_bg from "$lib/images/palworld_bg.webp";
   import cutee from "$lib/images/cutee.webp";
   import Palworld_video from "$lib/videos/Palworld.mp4";
