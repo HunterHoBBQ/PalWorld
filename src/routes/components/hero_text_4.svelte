@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import case_1 from "$lib/images/case_4.jpg";
+  import case_1 from "$lib/images/case_4.webp";
   let animateImage = false;
 
   onMount(() => {
