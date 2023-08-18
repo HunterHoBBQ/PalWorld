@@ -1,7 +1,9 @@
 <footer class="footer">
   <div class="container">
     <br />
-    <p>&copy; 2023 PalWorld. All rights reserved. <br />Website Developed By HunterBBQ.</p>
+    <a href="/">
+      <p>&copy; 2023 PalWorld. All rights reserved. <br />Fan Made By HunterBBQ.</p>
+    </a>
   </div>
 </footer>
 

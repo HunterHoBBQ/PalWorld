@@ -7,8 +7,8 @@
 
 <div class="navbar" class:visible={scrolledDown}>
   <div class="navbar__name">
-    <a href="/"> PalWorld </a>
-    <p style="font-size: 8px;">Developed by HunterBBQ</p>
+    <a href="/"> PalWorld @ Fan Made</a>
+    <!-- <p style="font-size: 8px;">Developed by HunterBBQ</p> -->
   </div>
   <button class="navbar__button">
     <a href="https://store.steampowered.com/app/1623730/Palworld/" target="_blank"> Play Now </a>
